@@ -1,0 +1,12 @@
+extends layout
+block content
+     ol
+     each sub in allsubject
+          li= sub.subjectname 
+               p
+                    a(href=`/subject/suggestion/${sub._id}`) suggestions
+                    br
+                    a(href=`/subject/issue/${sub._id}`) issues
+
+     else
+          li  no subject

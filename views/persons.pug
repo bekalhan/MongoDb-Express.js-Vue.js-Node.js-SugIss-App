@@ -1,0 +1,9 @@
+extends layout
+block content
+  h2 Persons 
+    #{allpersons.length}
+  ol
+  each person in allpersons
+    li= person.name 
+  else
+    li There are no values
